@@ -1,0 +1,12 @@
+def bubble_sort(A): # сортує близорукий прапорщик - порівнює двох і перевіряє відповідність зростанню. Якщо ні - переставляє їх.
+    """сортування списка А методом бульбашки"""
+    N = len(A)
+    for bypass in range(1,N):
+        for k in range (0, N-bypass): # щоб не бігати в хвіст строю
+            if A[k] > A [k+1]:
+                A [k], A[k+1] = A[k+1], A[k]
+
+A = [4, 2, 5, 1, 3]  
+A_sorted = [1, 2, 3, 4, 5] 
+bubble_sort(A)  
+print(A, 'Ok' if A == A_sorted else 'Fail')
