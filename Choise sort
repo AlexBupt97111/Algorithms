@@ -1,0 +1,10 @@
+def choise_sort(A): # вибрав найменшого - і не чіпає його  O(n)
+    N = len(A) 
+    for pos in range(0,N-1): # smallest elem - in pos; elem N - auto on his place
+        for k in range (pos+1, N): #pos+1 - no touch yet sorted
+             if A [k] < A[pos]: #k - index
+                 A[k], A[pos] = A [pos], A[k] #if elem in k, but itself better in pos - replace
+A = [4, 2, 5, 1, 3]  
+A_sorted = [1, 2, 3, 4, 5] 
+choise_sort(A)  
+print(A, 'Ok' if A == A_sorted else 'Fail')
